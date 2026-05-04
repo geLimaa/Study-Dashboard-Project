@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/settings.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <main>
+    <div class="main-div">
+
+      <aside class="sidebar">
+
+        <div class="top-content">
+          <h2>StudyFlow</h2>
+        </div>
+
+        <nav class="nav-links">
+          <ul class="links">
+            <li><a href="./dashboard.html"><i class="bx bx-home"></i>Dashboard</a></li>
+            <li><a href="./tasks.html"><i class="bx bx-task"></i>Tasks</a></li>
+            <li><a href="./habits.html"><i class="bx bx-repeat"></i>Habits</a></li>
+          </ul>
+        </nav>
+
+        <div class="bottom-content">
+          <div class="bottom-settings">
+            <a href="./settings.html"><i class="bx bx-cog"></i>Settings</a>
+          </div>
+          <div class="bottom-logout">
+            <a href="./login.html">            <i class="bx bx-log-out"></i>Logout</a>
+          </div>
+        </div>
+        
+      </aside>
+
+      <section id="dashboard-section">
+        <div class="dashboard-section-container">
+
+          <header class="dashboard-header">
+            <h1>Settings</h1>
+            <p>Customize your experience</p>
+          </header>
+
+          <div class="settings-container">
+
+            <div class="settings-card">
+              <h2>Profile</h2>
+
+              <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Your name">
+              </div>
+
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com">
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2>Security</h2>
+
+              <div class="input-group">
+                <label>New Password</label>
+                <input type="password" placeholder="••••••••">
+              </div>
+
+              <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="••••••••">
+              </div>
+            </div>
+
+            <div class="settings-card">
+              <h2>Appearance</h2>
+
+              <div class="theme-toggle">
+                <span>Dark Mode</span>
+                <label class="switch">
+                  <input type="checkbox" id="themeToggle">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <button class="save-btn">Save Changes</button>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+/* botão add */
+.add-task-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.add-task-btn:hover {
+  opacity: 0.9;
+}
+
+/* lista */
+.tasks-list {
+  margin-top: 20px;
+}
+
+/* item */
+.task {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.status {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.done {
+  color: green;
+}
+
+.status.pending {
+  color: orange;
+}
+
+/* link ativo na sidebar */
+.nav-links a.active {
+  background: #334155;
+  padding: 8px;
+  border-radius: 6px;
+}

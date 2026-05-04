@@ -1,0 +1,94 @@
+.settings-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.settings-card h2 {
+  font-size: 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: #ccc;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 2.5px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: cadetblue;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+.save-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: cadetblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}

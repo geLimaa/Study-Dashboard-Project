@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <main>
+    <div class="main-div">
+
+      <aside class="sidebar">
+
+        <div class="top-content">
+          <h2>StudyFlow</h2>
+        </div>
+
+        <nav class="nav-links">
+          <ul class="links">
+            <li><a href="./dashboard.html"><i class="bx bx-home"></i>Dashboard</a></li>
+            <li><a href="./tasks.html"><i class="bx bx-task"></i>Tasks</a></li>
+            <li><a href="./habits.html"><i class="bx bx-repeat"></i>Habits</a></li>
+          </ul>
+        </nav>
+
+        <div class="bottom-content">
+          <div class="bottom-settings">
+            <a href="./settings.html"><i class="bx bx-cog"></i>Settings</a>
+          </div>
+          <div class="bottom-logout">
+            <a href="./login.html">            <i class="bx bx-log-out"></i>Logout</a>
+          </div>
+        </div>
+
+      </aside>
+
+      <section id="dashboard-section">
+        <div class="dashboard-section-container">
+
+          <header class="dashboard-header">
+            <h1>Dashboard</h1>
+            <p>Welcome back!</p>
+          </header>
+          
+          <div class="cards-container">
+            <div class="card">
+              <p>Tasks:</p> 
+              <span>5</span>
+            </div>
+            <div class="card">
+              <p>Done Tasks:</p> 
+              <span>2</span>
+            </div>
+            <div class="card">
+              <p>Habits</p> 
+              <span>3</span>
+            </div>
+          </div>
+
+          <div class="tasks-section">
+            <h2>Recent Tasks</h2>
+            <ul>
+              <li>Study Math</li>
+              <li>Do Algorithms List</li>
+              <li>Review Notes</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+    <script src="../scripts/login.js" type="module"></script>
+    <script src="../scripts/tasks.js"></script>
+  </main>
+</body>
+
+</html>
