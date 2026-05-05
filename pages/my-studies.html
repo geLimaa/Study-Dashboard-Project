@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Studies</title>
+
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/my-studies.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <main>
+    <div class="main-div">
+
+      <aside class="sidebar">
+
+        <div class="top-content">
+          <h2>StudyFlow</h2>
+        </div>
+
+        <nav class="nav-links">
+          <ul class="links">
+            <li><a href="./dashboard.html"><i class="bx bx-home"></i>Dashboard</a></li>
+            <li><a href="./tasks.html"><i class="bx bx-task"></i>Tasks</a></li>
+            <li><a href="./habits.html"><i class="bx bx-repeat"></i>Habits</a></li>
+            <li><a href="./my-studies.html"><i class="bx bx-book"></i>My Studies</a></li>
+            <li><a href="./communities.html"><i class="bx bx-group"></i>Communities</a></li>
+          </ul>
+        </nav>
+
+        <div class="bottom-content">
+          <div class="bottom-settings">
+            <a href="./settings.html"><i class="bx bx-cog"></i>Settings</a>
+          </div>
+          <div class="bottom-logout">
+            <a href="./login.html">            <i class="bx bx-log-out"></i>Logout</a>
+          </div>
+        </div>
+
+      </aside>
+
+      <section id="dashboard-section">
+
+        <h1>Studies</h1>
+
+        <div class="progress-section">
+          <h2>Progress</h2>
+
+          <div class="progress-cards">
+
+            <div class="progress-card">
+              <div class="progress-circle" style="--value: 60">
+                <span>60%</span>
+              </div>
+              <p>Math Exercises</p>
+            </div>
+
+            <div class="progress-card">
+              <div class="progress-circle" style="--value: 40">
+                <span>40%</span>
+              </div>
+              <p>Web Coding Project</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="folders-section">
+          <h2>My Folders</h2>
+
+          <div class="folders">
+            <a href="./math.html" class="folder">
+              <i class="bx bx-folder"></i>
+              <p>Math Files & Exercises</p>
+            </a>
+
+            <a href="./coding.html" class="folder">
+              <i class="bx bx-folder"></i>
+              <p>Coding Project</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="files-section">
+          <h2>Recent Files</h2>
+
+          <div class="files">
+            <div class="file">📄 VectorAndArrays.pdf</div>
+            <div class="file">📄 CalculumNotes.txt</div>
+          </div>
+        </div>
+
+        <div class="my-communities">
+          <h2>My Communities</h2>
+
+          <div class="communities">
+
+            <div class="community-card">
+              <div class="community-header">
+                <i class="bx bxl-javascript"></i>
+                <h3>JavaScript Coding</h3>
+              </div>
+              <p>Web development, tips and best practices.</p>
+            </div>
+
+            <div class="community-card">
+              <div class="community-header">
+                <i class="bx bx-math"></i>
+                <h3>Math Experts</h3>
+              </div>
+              <p>Calculus, algebra and problem solving.</p>
+            </div>
+
+            <div class="community-card">
+              <div class="community-header">
+                <i class="bx bx-code-alt"></i>
+                <h3>Algorithms</h3>
+              </div>
+              <p>Data structures and competitive programming.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../scripts/studies.js"></script>
+</body>
+
+</html>

@@ -72,7 +72,6 @@ O sistema ainda não possui backend, sendo essa uma versão inicial voltada para
 ## 👥 Equipe de desenvolvedores
 
 - Gean Lima  
-- Maria Fernanda
 
 ---
 

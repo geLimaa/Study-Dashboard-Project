@@ -24,6 +24,8 @@
             <li><a href="./dashboard.html"><i class="bx bx-home"></i>Dashboard</a></li>
             <li><a href="./tasks.html"><i class="bx bx-task"></i>Tasks</a></li>
             <li><a href="./habits.html"><i class="bx bx-repeat"></i>Habits</a></li>
+            <li><a href="./my-studies.html"><i class="bx bx-book"></i>My Studies</a></li>
+            <li><a href="./communities.html"><i class="bx bx-group"></i>Communities</a></li>
           </ul>
         </nav>
 
@@ -43,31 +45,69 @@
 
           <header class="dashboard-header">
             <h1>Dashboard</h1>
-            <p>Welcome back!</p>
+            <p>Welcome back! Here's your progress overview.</p>
           </header>
-          
-          <div class="cards-container">
-            <div class="card">
-              <p>Tasks:</p> 
+
+          <div class="dashboard-grid">
+
+            <div class="card stat">
+              <p>Tasks</p>
               <span>5</span>
             </div>
-            <div class="card">
-              <p>Done Tasks:</p> 
+
+            <div class="card stat">
+              <p>Done</p>
               <span>2</span>
             </div>
-            <div class="card">
-              <p>Habits</p> 
+
+            <div class="card stat">
+              <p>Habits</p>
               <span>3</span>
             </div>
-          </div>
 
-          <div class="tasks-section">
-            <h2>Recent Tasks</h2>
-            <ul>
-              <li>Study Math</li>
-              <li>Do Algorithms List</li>
-              <li>Review Notes</li>
-            </ul>
+            <div class="card progress-card">
+              <h3>Study Progress</h3>
+
+              <div class="mini-progress">
+                <p>Math</p>
+                <div class="bar"><div style="width:60%"></div></div>
+              </div>
+
+              <div class="mini-progress">
+                <p>Coding</p>
+                <div class="bar"><div style="width:40%"></div></div>
+              </div>
+            </div>
+
+            <div class="card tasks-card">
+              <h3>Recent Tasks</h3>
+              <ul>
+                <li>Study Math</li>
+                <li>Do Algorithms List</li>
+                <li>Review Notes</li>
+              </ul>
+            </div>
+
+            <div class="card communities-card">
+              <h3>Your Communities</h3>
+
+              <div class="mini-community">
+                <i class="bx bxl-javascript"></i>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="mini-community">
+                <i class="bx bx-math"></i>
+                <span>Math Experts</span>
+              </div>
+            </div>
+
+            <div class="card files-card">
+              <h3>Recent Files</h3>
+              <p>📄 VectorArrays.pdf</p>
+              <p>📄 Notes.txt</p>
+            </div>
+
           </div>
         </div>
 
