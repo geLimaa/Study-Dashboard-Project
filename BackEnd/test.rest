@@ -1,0 +1,27 @@
+### GET '/health'
+GET http://localhost:3001/health
+
+### GET '/db-health
+GET http://localhost:3001/db-health 
+
+### GET API root
+GET http://localhost:3001/api
+
+### POST register
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Gean Lima",
+  "email": "gean@studyflow.dev",
+  "password": "123456"
+}
+
+### POST login
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "gean@studyflow.dev",
+  "password": "123456"
+}

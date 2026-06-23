@@ -47,17 +47,20 @@ Facilitar a organização de estudos, permitindo que o usuário:
 ---
 
 ## 📁 Estrutura do Projeto
-/pages → páginas HTML
-/styles → arquivos CSS
-/scripts → scripts JavaScript
-/assets → imagens e ícones
+/FrontEnd/src → páginas, componentes e estado do frontend
+/FrontEnd/styles → estilos globais
+/BackEnd/src → API, middlewares e rotas
+/BackEnd/prisma → schema e seed do banco
+/assets → imagens e ícones do projeto
 
 ---
 
 ## 🚀 Como Executar
 
-1. Clone o repositório
-2. Abra o arquivo `login.html` no navegador
+1. Inicie o PostgreSQL e aplique o schema do banco
+2. Rode o backend em `BackEnd/` com `npm run dev`
+3. Sirva o frontend a partir de `FrontEnd/` com `python3 -m http.server 5001`
+4. Abra `http://127.0.0.1:5001/index.html#login`
 
 ---
 
@@ -65,7 +68,28 @@ Facilitar a organização de estudos, permitindo que o usuário:
 
 Este projeto faz parte da disciplina **Desenvolvimento de Sistemas Web I**, com foco no desenvolvimento frontend utilizando HTML, CSS e JavaScript.
 
-O sistema ainda não possui backend, sendo essa uma versão inicial voltada para prototipação e interface.
+O sistema agora possui uma base de backend em `BackEnd/`, com API, Prisma e autenticação.
+
+## Backend
+
+O backend usa:
+
+- `Node.js` + `Express`
+- `Prisma`
+- `PostgreSQL`
+- `JWT` para autenticação
+
+### Endpoints principais
+
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/me`
+- `GET /api/dashboard`
+- `GET /api/tasks`
+- `GET /api/habits`
+- `GET /api/studies`
+- `GET /api/communities`
+- `GET /api/files`
 
 ---
 

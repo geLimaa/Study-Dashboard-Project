@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  level        String   @default("Universitario")
+  theme        String   @default("light")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  tasks        Task[]
+  habits       Habit[]
+  studies      Study[]
+  files        File[]
+  memberships  CommunityMember[]
+}
+
+model Task {
+  id          String       @id @default(cuid())
+  userId      String
+  title       String
+  course      String
+  dueDateLabel String
+  priority    String       @default("Media")
+  status      String       @default("Pendente")
+  notes       String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Habit {
+  id         String         @id @default(cuid())
+  userId     String
+  title      String
+  streak     Int            @default(0)
+  doneToday  Boolean        @default(false)
+  frequency  String         @default("Diario")
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+
+  user       User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Study {
+  id         String   @id @default(cuid())
+  userId     String
+  title      String
+  progress   Int      @default(0)
+  hours      Float    @default(0)
+  color      String   @default("blue")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Community {
+  id          String            @id @default(cuid())
+  title       String
+  slug        String            @unique
+  members     Int               @default(0)
+  icon        String            @default("bx-group")
+  description String
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  memberships CommunityMember[]
+}
+
+model CommunityMember {
+  id           String     @id @default(cuid())
+  userId       String
+  communityId  String
+  role         String     @default("member")
+  joinedAt     DateTime   @default(now())
+
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  community    Community  @relation(fields: [communityId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, communityId])
+}
+
+model File {
+  id          String   @id @default(cuid())
+  userId      String?
+  name        String
+  area        String
+  dateLabel   String
+  storagePath String?
+  mimeType    String?
+  size        Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+}
