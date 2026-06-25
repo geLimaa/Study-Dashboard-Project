@@ -99,7 +99,3 @@ O backend usa:
 
 ---
 
-## 📷 Preview
-
-![Dashboard](./assets/dashboard.png)
-![Login](./assets/login.png)
